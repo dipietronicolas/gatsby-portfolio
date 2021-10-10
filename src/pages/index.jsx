@@ -1,9 +1,10 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Presentation from "../components/Presentation/Presentation";
-import Appbar from "../components/Appbar/Appbar";
-import { ColorModeProvider } from "../context/colorModeContext";
 import Layout from "../components/Layout/Layout";
+import Presentation from "../components/Presentation/Presentation";
+import Projects from "../components/Projects/Projects";
+import Appbar from "../components/Appbar/Appbar";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ColorModeProvider } from "../context/colorModeContext";
 
 // markup
 const IndexPage = () => {
@@ -15,6 +16,7 @@ const IndexPage = () => {
         <CssBaseline />
         <Appbar />
         <Presentation />
+        <Projects />
       </Layout>
     </ColorModeProvider>
   )

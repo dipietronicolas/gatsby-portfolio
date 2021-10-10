@@ -1,5 +1,5 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import { ColorModeContext } from '../../context/colorModeContext';
 
 const Layout = ({ children }) => {
@@ -12,9 +12,10 @@ const Layout = ({ children }) => {
     },
   });
 
+  const responsiveTheme = responsiveFontSizes(theme)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={responsiveTheme}>
       { children }
     </ThemeProvider>
   )

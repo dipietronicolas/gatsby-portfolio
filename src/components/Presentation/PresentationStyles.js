@@ -16,7 +16,7 @@ const myStyles = {
     return ({
       minHeight: '100%',
       width: '100%',
-      background: color === 'dark' ? 'rgba(0,0,0,0.4)' : 'rgba(255,255,255,0.7)',
+      background: color === 'dark' ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.7)',
       position: "absolute",
       zIndex: '2'
     })
