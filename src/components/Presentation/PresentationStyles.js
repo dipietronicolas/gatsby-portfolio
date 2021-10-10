@@ -25,11 +25,21 @@ const myStyles = {
   gridContainer: {
     height: '100%',
     alignItems: 'center',
+    justifyContent: 'center',
     zIndex: '3',
-    position: 'relative'
+    position: 'relative',
+    '@media (max-width: 700px)': {
+      justifyContent: 'center',
+    }
+  },
+  presentationContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
   },
   socialMediaGrid: {
     paddingRight: '1rem',
+    justifyContent: 'flex-end',
     '@media (max-width: 700px)': {
       width: '100%'
     }

@@ -20,12 +20,13 @@ const Presentation = () => {
         <Grid container
           sx={myStyles.gridContainer}
           spacing={3}
-          direction={matches ? "column-reverse" : "row"}>
+          direction={matches ? "column" : "row"}>
           <Fade in={true} appear={true} timeout={500}>
-            <Grid item xs={10} md={8}>
-              <Typography component="h1" variant="h2">Hello, my name is</Typography>
-              <Typography component="h1" variant="h2">Nicolas Di Pietro Paolo</Typography>
-              <Typography component="h3" variant="h5">
+            <Grid item xs={8} md={8} sx={myStyles.presentationContainer}>
+              <Typography component="h1" variant={matches ? 'h4' : "h2"}>
+                Hello, my name is <br />Nicolas Di Pietro Paolo
+              </Typography>
+              <Typography component="h3" variant={matches ? 'h6' : "h5"}>
                 I'm a software engineer, I build responsive websites and web applications. You may see some of my work down below.
               </Typography>
               <Box my={3}>
@@ -34,7 +35,7 @@ const Presentation = () => {
             </Grid>
           </Fade >
           <Fade in={true} appear={true} timeout={500}>
-            <Grid sx={myStyles.socialMediaGrid} item md={4} >
+            <Grid sx={myStyles.socialMediaGrid} item lg={4} >
               <Social direction={matches ? "row" : "column"} />
             </Grid>
           </Fade >

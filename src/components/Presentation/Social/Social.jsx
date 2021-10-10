@@ -14,12 +14,13 @@ const Social = ({ direction }) => {
     <Grid container 
       direction={direction} 
       spacing={3} 
-      alignItems="center" 
-      justifyContent="flex-end">
+      alignItems='center' 
+      justifyContent="center"
+      justifyItems="end">
       {
         SocialMediaIcons.map((item, idx) => {
           return (
-            <Grid item key={idx} >
+            <Grid item key={idx}>
               <Link href={item.link} target="_blank" rel="noreferrer">
                 <IconButton>
                   <item.icon />

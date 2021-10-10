@@ -1,22 +1,22 @@
 import * as React from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from "@mui/material/CssBaseline";
 import Presentation from "../components/Presentation/Presentation";
+import Appbar from "../components/Appbar/Appbar";
+import { ColorModeProvider } from "../context/colorModeContext";
+import Layout from "../components/Layout/Layout";
 
 // markup
 const IndexPage = () => {
 
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-  });
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Presentation />
-    </ThemeProvider>
+    <ColorModeProvider>
+      <Layout>
+        <CssBaseline />
+        <Appbar />
+        <Presentation />
+      </Layout>
+    </ColorModeProvider>
   )
 }
 
