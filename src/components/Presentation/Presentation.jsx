@@ -3,10 +3,12 @@ import { Box, Grid, Container, Paper, Typography, Button, useMediaQuery, Fade } 
 import Social from './Social/Social';
 import myStyles from './PresentationStyles';
 import { StaticImage } from 'gatsby-plugin-image';
+import { ColorModeContext } from '../../context/colorModeContext';
 
 const Presentation = () => {
 
   const matches = useMediaQuery('(max-width:700px)');
+  const { colorMode } = React.useContext(ColorModeContext);
 
   React.useEffect(() => {
     console.log(matches);
@@ -14,8 +16,18 @@ const Presentation = () => {
 
   return (
     <Paper sx={myStyles.section} elevation={3} >
-      <StaticImage style={myStyles.wallpaper} src="../../images/night-1080.jpg" alt="background image dipietronicolas website" />
-      <Box sx={myStyles.overlay}></Box>
+      {
+        colorMode === 'dark' 
+        ? <StaticImage
+            style={myStyles.wallpaper}
+            src="../../images/night-1080.jpg"
+            alt="background image dipietronicolas website" />
+        : <StaticImage
+            style={myStyles.wallpaper}
+            src="../../images/waterdrops.jpg"
+            alt="background image dipietronicolas website" />
+      }
+      <Box sx={myStyles.overlay(colorMode)}></Box>
       <Container sx={myStyles.container} maxWidth="md">
         <Grid container
           sx={myStyles.gridContainer}

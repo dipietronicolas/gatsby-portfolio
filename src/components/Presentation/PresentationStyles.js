@@ -12,12 +12,14 @@ const myStyles = {
     position: "absolute",
     zIndex: '1'
   },
-  overlay: {
-    minHeight: '100%',
-    width: '100%',
-    background: 'rgba(0,0,0,0.4)',
-    position: "absolute",
-    zIndex: '2'
+  overlay(color) {
+    return ({
+      minHeight: '100%',
+      width: '100%',
+      background: color === 'dark' ? 'rgba(0,0,0,0.4)' : 'rgba(255,255,255,0.7)',
+      position: "absolute",
+      zIndex: '2'
+    })
   },
   container: {
     height: '100%'
