@@ -41,7 +41,7 @@ const Presentation = () => {
           spacing={3}
           direction={matches ? "column" : "row"}>
           <Fade in={true} appear={true} timeout={500}>
-            <Grid item md={9} sx={myStyles.presentationContainer}>
+            <Grid item sm={8} lg={9} sx={myStyles.presentationContainer}>
               {/* <Typography component="h1" variant={matches ? 'h4' : "h2"}> */}
               <Typography component="h1" variant="h2">
                 Hello, my name is Nicolas Di Pietro Paolo
@@ -54,10 +54,10 @@ const Presentation = () => {
                
                 <Button
                   underline="none"
-                  variant="contained"
-                  color="primary"
+                  variant="outlined"
+                  color="secondary"
                   href="/dipietronicolas.pdf"
-                  target="_blank">Testing Button</Button>
+                  target="_blank">Download my cv</Button>
               </Box>
             </Grid>
           </Fade >

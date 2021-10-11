@@ -32,6 +32,7 @@ const myStyles = {
     position: 'relative',
     '@media (max-width: 700px)': {
       justifyContent: 'center',
+      paddingTop: '5rem'
     }
   },
   presentationContainer: {
@@ -41,6 +42,7 @@ const myStyles = {
   },
   socialMediaGrid: {
     paddingRight: '1rem',
+    display: 'flex',
     justifyContent: 'flex-end',
     '@media (max-width: 700px)': {
       width: '100%'
