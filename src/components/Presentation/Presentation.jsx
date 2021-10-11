@@ -1,5 +1,8 @@
 import React from 'react';
-import { Box, Grid, Container, Paper, Typography, Button, useMediaQuery, Fade } from "@mui/material/";
+import { 
+  Box, Grid, Container, Paper, Typography, 
+  Button, useMediaQuery, Fade 
+} from "@mui/material/";
 import Social from './Social/Social';
 import myStyles from './PresentationStyles';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -11,16 +14,9 @@ const Presentation = () => {
   const matches = useMediaQuery('(max-width:700px)');
   const { colorMode } = React.useContext(ColorModeContext);
 
-  React.useEffect(() => {
-    console.log(matches);
-    
-  }, [matches])
-
   const handleScrollButton = () => {
     window[`scrollTo`]({ top: presentationRef.current.clientHeight, behavior: 'smooth' });
   }
-
-
   return (
     <Paper sx={myStyles.section} elevation={3} id="presentation" ref={presentationRef}>
       {

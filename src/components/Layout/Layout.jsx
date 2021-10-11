@@ -1,6 +1,7 @@
 import React from 'react';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import { ColorModeContext } from '../../context/colorModeContext';
+import { Box } from '@mui/material';
 
 const Layout = ({ children }) => {
 
@@ -16,7 +17,9 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={responsiveTheme}>
-      { children }
+      <Box sx={{ overflowX: "hidden"}}>
+        {children}
+      </Box>
     </ThemeProvider>
   )
 }

@@ -2,7 +2,7 @@
 
 const myStyles = {
   section: {
-    height: '90vh',
+    height: '94vh',
     position: "relative",
     zIndex: '0'
   },
