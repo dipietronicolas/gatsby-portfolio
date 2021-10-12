@@ -6,7 +6,7 @@ const myStyles = {
       padding: '10rem 2rem',
     },
     '@media (max-width: 700px)': {
-      padding: '10rem 1rem',
+      padding: '5rem 1rem',
     }
   },
   project: {
@@ -43,7 +43,10 @@ const myStyles = {
     marginTop: '5rem',
     display: 'flex',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    '@media (max-width: 700px)': {
+      marginTop: '2rem'
+    }
   }
 }
 
